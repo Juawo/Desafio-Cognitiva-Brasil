@@ -2,14 +2,14 @@ import Groq from "groq-sdk";
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
-export async function comparisonContentGemma(texto1,texto2,texto3) {
+export async function comparisonContent(text1,text2,text3) {
   const prompt = `Avalie os textos abaixo pelos critério : Criatividade, Clareza, Coerência, Originalidade, Relevância e Gramática
 
-  Nome da IA que gerou o texto : ${texto1} ;
+  Nome da IA que gerou o texto : ${text1} ;
 
-  Nome da IA que gerou o texto : ${texto2} ;
+  Nome da IA que gerou o texto : ${text2} ;
 
-  Nome da IA que gerou o texto : ${texto3} ;
+  Nome da IA que gerou o texto : ${text3} ;
 
   Retorne a resposta apenas com a ordem de melhor texto, exemplo '1º - Texto da {Nome da IA} ; 2º - Texto da {Nome da IA} ; 3º - Texto da {Nome da IA}'`;
 
