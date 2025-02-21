@@ -4,7 +4,7 @@ const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 export async function generateContentLlama(prompt) {
   const chatCompletion = await getGroqChatCompletion(prompt);
-  console.log(chatCompletion.choices[0]?.message?.content || "");
+  return chatCompletion.choices[0]?.message?.content || "";
 }
 
 export async function getGroqChatCompletion(prompt) {
